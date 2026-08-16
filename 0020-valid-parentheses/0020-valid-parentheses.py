@@ -23,20 +23,22 @@ class Solution:
         for ch in s:
 
             # Opening parenthesis
-            if ch == '(' or ch == '{' or ch == '[':
+            if ch == "(" or ch == "{" or ch == "[":
                 push(ch)
 
             # Closing parenthesis
-            elif ch == ')' or ch == '}' or ch == ']':
+            elif ch == ")" or ch == "}" or ch == "]":
 
                 if is_empty():
                     return False
 
                 current_parent = pop()
 
-                if ((ch == ')' and current_parent != '(') or
-                    (ch == '}' and current_parent != '{') or
-                    (ch == ']' and current_parent != '[')):
+                if (
+                    (ch == ")" and current_parent != "(")
+                    or (ch == "}" and current_parent != "{")
+                    or (ch == "]" and current_parent != "[")
+                ):
                     return False
 
         # Stack should be empty at the end
