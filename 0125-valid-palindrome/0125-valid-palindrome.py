@@ -7,8 +7,9 @@ class Solution:
 
         import re
         s = re.sub(r'[^a-zA-Z0-9]', '', s)
-        print(s)
-        print("Reversed", s[::-1])
+
+        # print(s)
+        # print("Reversed", s[::-1])
         if s == s[::-1]:
             return True
         else:
